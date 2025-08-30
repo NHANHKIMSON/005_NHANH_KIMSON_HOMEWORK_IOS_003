@@ -24,9 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		188AFD072E5C5FB800F42B6C /* E-commerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-commerce.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		188AFD142E5C5FB900F42B6C /* E-commerceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "E-commerceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		188AFD1E2E5C5FB900F42B6C /* E-commerceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "E-commerceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		188AFD072E5C5FB800F42B6C /* Psakhmer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Psakhmer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		188AFD142E5C5FB900F42B6C /* PsakhmerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PsakhmerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		188AFD1E2E5C5FB900F42B6C /* PsakhmerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PsakhmerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -85,9 +85,9 @@
 		188AFD082E5C5FB800F42B6C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				188AFD072E5C5FB800F42B6C /* E-commerce.app */,
-				188AFD142E5C5FB900F42B6C /* E-commerceTests.xctest */,
-				188AFD1E2E5C5FB900F42B6C /* E-commerceUITests.xctest */,
+				188AFD072E5C5FB800F42B6C /* Psakhmer.app */,
+				188AFD142E5C5FB900F42B6C /* PsakhmerTests.xctest */,
+				188AFD1E2E5C5FB900F42B6C /* PsakhmerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		188AFD062E5C5FB800F42B6C /* E-commerce */ = {
+		188AFD062E5C5FB800F42B6C /* Psakhmer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 188AFD282E5C5FB900F42B6C /* Build configuration list for PBXNativeTarget "E-commerce" */;
+			buildConfigurationList = 188AFD282E5C5FB900F42B6C /* Build configuration list for PBXNativeTarget "Psakhmer" */;
 			buildPhases = (
 				188AFD032E5C5FB800F42B6C /* Sources */,
 				188AFD042E5C5FB800F42B6C /* Frameworks */,
@@ -110,16 +110,16 @@
 			fileSystemSynchronizedGroups = (
 				188AFD092E5C5FB800F42B6C /* E-commerce */,
 			);
-			name = "E-commerce";
+			name = Psakhmer;
 			packageProductDependencies = (
 			);
 			productName = "E-commerce";
-			productReference = 188AFD072E5C5FB800F42B6C /* E-commerce.app */;
+			productReference = 188AFD072E5C5FB800F42B6C /* Psakhmer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		188AFD132E5C5FB900F42B6C /* E-commerceTests */ = {
+		188AFD132E5C5FB900F42B6C /* PsakhmerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 188AFD2B2E5C5FB900F42B6C /* Build configuration list for PBXNativeTarget "E-commerceTests" */;
+			buildConfigurationList = 188AFD2B2E5C5FB900F42B6C /* Build configuration list for PBXNativeTarget "PsakhmerTests" */;
 			buildPhases = (
 				188AFD102E5C5FB900F42B6C /* Sources */,
 				188AFD112E5C5FB900F42B6C /* Frameworks */,
@@ -133,16 +133,16 @@
 			fileSystemSynchronizedGroups = (
 				188AFD172E5C5FB900F42B6C /* E-commerceTests */,
 			);
-			name = "E-commerceTests";
+			name = PsakhmerTests;
 			packageProductDependencies = (
 			);
 			productName = "E-commerceTests";
-			productReference = 188AFD142E5C5FB900F42B6C /* E-commerceTests.xctest */;
+			productReference = 188AFD142E5C5FB900F42B6C /* PsakhmerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		188AFD1D2E5C5FB900F42B6C /* E-commerceUITests */ = {
+		188AFD1D2E5C5FB900F42B6C /* PsakhmerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 188AFD2E2E5C5FB900F42B6C /* Build configuration list for PBXNativeTarget "E-commerceUITests" */;
+			buildConfigurationList = 188AFD2E2E5C5FB900F42B6C /* Build configuration list for PBXNativeTarget "PsakhmerUITests" */;
 			buildPhases = (
 				188AFD1A2E5C5FB900F42B6C /* Sources */,
 				188AFD1B2E5C5FB900F42B6C /* Frameworks */,
@@ -156,11 +156,11 @@
 			fileSystemSynchronizedGroups = (
 				188AFD212E5C5FB900F42B6C /* E-commerceUITests */,
 			);
-			name = "E-commerceUITests";
+			name = PsakhmerUITests;
 			packageProductDependencies = (
 			);
 			productName = "E-commerceUITests";
-			productReference = 188AFD1E2E5C5FB900F42B6C /* E-commerceUITests.xctest */;
+			productReference = 188AFD1E2E5C5FB900F42B6C /* PsakhmerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 188AFD022E5C5FB800F42B6C /* Build configuration list for PBXProject "E-commerce" */;
+			buildConfigurationList = 188AFD022E5C5FB800F42B6C /* Build configuration list for PBXProject "Psakhmer" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,9 +200,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				188AFD062E5C5FB800F42B6C /* E-commerce */,
-				188AFD132E5C5FB900F42B6C /* E-commerceTests */,
-				188AFD1D2E5C5FB900F42B6C /* E-commerceUITests */,
+				188AFD062E5C5FB800F42B6C /* Psakhmer */,
+				188AFD132E5C5FB900F42B6C /* PsakhmerTests */,
+				188AFD1D2E5C5FB900F42B6C /* PsakhmerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +258,12 @@
 /* Begin PBXTargetDependency section */
 		188AFD162E5C5FB900F42B6C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 188AFD062E5C5FB800F42B6C /* E-commerce */;
+			target = 188AFD062E5C5FB800F42B6C /* Psakhmer */;
 			targetProxy = 188AFD152E5C5FB900F42B6C /* PBXContainerItemProxy */;
 		};
 		188AFD202E5C5FB900F42B6C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 188AFD062E5C5FB800F42B6C /* E-commerce */;
+			target = 188AFD062E5C5FB800F42B6C /* Psakhmer */;
 			targetProxy = 188AFD1F2E5C5FB900F42B6C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -461,7 +461,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/E-commerce.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/E-commerce";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Psakhmer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Psakhmer";
 			};
 			name = Debug;
 		};
@@ -480,7 +480,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/E-commerce.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/E-commerce";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Psakhmer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Psakhmer";
 			};
 			name = Release;
 		};
@@ -521,7 +521,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		188AFD022E5C5FB800F42B6C /* Build configuration list for PBXProject "E-commerce" */ = {
+		188AFD022E5C5FB800F42B6C /* Build configuration list for PBXProject "Psakhmer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				188AFD262E5C5FB900F42B6C /* Debug */,
@@ -530,7 +530,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		188AFD282E5C5FB900F42B6C /* Build configuration list for PBXNativeTarget "E-commerce" */ = {
+		188AFD282E5C5FB900F42B6C /* Build configuration list for PBXNativeTarget "Psakhmer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				188AFD292E5C5FB900F42B6C /* Debug */,
@@ -539,7 +539,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		188AFD2B2E5C5FB900F42B6C /* Build configuration list for PBXNativeTarget "E-commerceTests" */ = {
+		188AFD2B2E5C5FB900F42B6C /* Build configuration list for PBXNativeTarget "PsakhmerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				188AFD2C2E5C5FB900F42B6C /* Debug */,
@@ -548,7 +548,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		188AFD2E2E5C5FB900F42B6C /* Build configuration list for PBXNativeTarget "E-commerceUITests" */ = {
+		188AFD2E2E5C5FB900F42B6C /* Build configuration list for PBXNativeTarget "PsakhmerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				188AFD2F2E5C5FB900F42B6C /* Debug */,
