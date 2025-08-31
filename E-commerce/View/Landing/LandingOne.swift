@@ -12,9 +12,10 @@ struct LandingOne: View {
                     Title(subTitle, style: .subtitle)
                 }
             }
+            .padding(.horizontal)
         }
     }
 }
 #Preview {
-    LandingOne()
+    ContentView()
 }

@@ -1,17 +1,39 @@
-//
-//  Home.swift
-//  Psakhmer
-//
-//  Created by Apple on 8/28/25.
-//
-
 import SwiftUI
-
 struct Home: View {
+    var tab = ["Home", "Category"]
+    var view = [AnyView(SubHome()), AnyView(Category())]
+    @State var selectedTab: Int = 0
     var body: some View {
         NavigationStack{
-            ZStack{
-                Text("Home View")
+            UserInfo()
+            VStack{
+                HStack{
+                    ForEach(tab.indices, id: \.self){ index in
+                        Button(action: {withAnimation{
+                            selectedTab = index
+                        }}){
+                            VStack{
+                                Text("\(tab[index])")
+                                    .font(.title2)
+                                    .foregroundStyle(.black)
+                                Capsule()
+                                    .fill(selectedTab == index ? Color(.blue) : Color.clear)
+                                    .frame(height: 3)
+                            }
+                        }
+                    }
+                }
+                
+            }
+            // display View
+            ScrollView{
+                if selectedTab == 0{
+                    VStack{
+                        SubHome()
+                    }
+                }else{
+                    Category()
+                }
             }
         }
     }
@@ -19,4 +41,32 @@ struct Home: View {
 
 #Preview {
     Home()
+}
+
+
+struct UserInfo: View {
+    var user: User = User.user
+    var body: some View {
+        HStack(alignment: .center){
+                bedge(iconName: user.image)
+                    .clipShape(.circle)
+                    .frame(width: 42)
+            VStack(alignment: .leading, spacing: 8){
+                    Text("Hi, \(user.fullName)")
+                    .bold()
+                    Text("Let's go shopping")
+                        .font(.caption)
+                        .foregroundStyle(.gray)
+                
+            }
+            Spacer()
+            HStack{
+                Image(systemName: "magnifyingglass")
+                Image(systemName: "bell")
+            }
+            .font(.title2)
+        }
+        .padding(.horizontal)
+        .padding(.vertical, 20)
+    }
 }

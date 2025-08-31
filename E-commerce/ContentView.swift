@@ -1,35 +1,33 @@
 import SwiftUI
 
 struct ContentView: View {
-    var pages: [AnyView] = [AnyView(LandingOne(iamge: "watchTissot")), AnyView(LandingOne(iamge: "bagboy1")), AnyView(LandingOne(iamge: "watchWoman"))]
     @State var isLogin: Bool = false
     var body: some View {
-        NavigationStack{
-            VStack{
-                TabView{
-                    ForEach(pages.indices, id: \.self){ index in
-                        pages[index]
+        if isLogin {
+            TabView{
+                Home()
+                    .tabItem{
+                        Label("Home", systemImage: "house.fill")
                     }
-                }
-                .tabViewStyle(.page)
-                .indexViewStyle(.page(backgroundDisplayMode: .always))
-                VStack(spacing: 18){
-                    primaryButton(text: "Create an account", false){
-                        isLogin = true
+                Text("Order")
+                    .tabItem{
+                        Label("Order", systemImage: "box.truck.fill")
                     }
-                    .navigationDestination(isPresented: $isLogin){
-                        CreateAccount()
-                            .navigationBarBackButtonHidden(true)
+                Favorite()
+                    .tabItem{
+                        Label("Favorite", systemImage: "heart.fill")
                     }
-                    primaryButton(text: "Already have an account", true){
+                Profile(isLogout: $isLogin)
+                    .tabItem{
+                        Label("Profile", systemImage: "person.fill")
                     }
-                }
             }
-            .padding(.horizontal)
+            .tint(.blue)
+        }else{
+            Landing(isHome: $isLogin)
         }
     }
 }
-
 #Preview {
     ContentView()
 }

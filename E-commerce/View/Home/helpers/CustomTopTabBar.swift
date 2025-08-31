@@ -1,10 +1,3 @@
-//
-//  CustomTabBar.swift
-//  Psakhmer
-//
-//  Created by Apple on 8/28/25.
-//
-
 import SwiftUI
 
 struct CustomTopTabBar: View {

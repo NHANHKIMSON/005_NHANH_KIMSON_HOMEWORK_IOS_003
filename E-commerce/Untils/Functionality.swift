@@ -14,10 +14,6 @@ func formatCurrency(_ amount: Double, currencyCode: String = "USD") -> String{
     let formatter = NumberFormatter()
     formatter.numberStyle = .currency
     formatter.currencyCode = currencyCode
-    // add a space to currency
-    if let symbol = formatter.currencySymbol{
-        formatter.currencySymbol = symbol + " "
-    }
     return formatter.string(from: NSNumber(value: amount)) ?? "\(amount)"
 }
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

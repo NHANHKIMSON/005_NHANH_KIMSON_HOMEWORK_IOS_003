@@ -16,6 +16,17 @@ struct TitleStyle{
     static let main = TitleStyle(font: .title, color: .primary, opacity: 1, isBold: true)
     static let subtitle = TitleStyle(font: .subheadline, color: Color(.systemGray), opacity: 0.9, isBold: false)
 }
+
+
+
+
+
+
+
+
+
+
+
 func ImageResizeToFit(name: String) -> some View{
     Image(name)
         .resizable()

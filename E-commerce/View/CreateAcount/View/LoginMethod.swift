@@ -12,7 +12,3 @@ struct LoginMethod: View {
         
     }
 }
-
-#Preview {
-    CreateAccount()
-}

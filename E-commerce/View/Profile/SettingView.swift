@@ -2,8 +2,9 @@ import SwiftUI
 
 struct SettingView: View{
     @Environment(\.dismiss) var dissmiss
+    @Binding var isLogout: Bool
     var body: some View{
-        SettingContentView()
+        SettingContentView(isLogout: $isLogout)
             .navigationBarBackButtonHidden(true)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -20,11 +21,9 @@ struct SettingView: View{
     }
 }
 
-#Preview{
-    SettingView()
-}
-
 struct SettingContentView: View{
+    @State var showAlert: Bool = false
+    @Binding var isLogout: Bool
     var body: some View{
         NavigationStack{
             List{
@@ -74,21 +73,41 @@ struct SettingContentView: View{
                         ListItem(icon: "arrow.up.right.circle", text: "Softwate Update")
                     }
                 }
-                NavigationLink{
-                    Text("logout")
+                Button{
+                    showAlert = true
                 } label: {
                     ListItem(icon: "rectangle.portrait.and.arrow.right", text: "Logout")
+                }
+                .alert("Confirmation", isPresented: $showAlert) {
+                    Button("Logout", role: .destructive) {
+                        // Perform delete action
+                        isLogout = false
+                        print("Item deleted!")
+                    }
+                    Button("Cancel", role: .cancel) {
+                        showAlert = false
+                        print("Deletion cancelled.")
+                    }
+                } message: {
+                    Text("Are you sure you want to delete this item?")
                 }
             }
             .toolbar{
                 ToolbarItem(placement: .principal){
                     Text("Setting")
+                        .font(.title2)
                         .bold()
                 }
             }
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
+
+#Preview{
+    ContentView()
+}
+
 struct ListItem: View {
     var icon: String = ""
     var text: String = ""

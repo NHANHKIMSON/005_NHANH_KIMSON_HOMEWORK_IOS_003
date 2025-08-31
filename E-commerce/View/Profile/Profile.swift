@@ -1,84 +1,103 @@
-//
-//  Profile.swift
-//  Psakhmer
-//
-//  Created by Apple on 8/29/25.
-//
+
 
 import SwiftUI
 import Foundation
 
 struct Profile: View {
+    @Binding var isLogout: Bool
     var body: some View {
         NavigationStack{
-            ProfileContentView()
-                .toolbar{
-                    ToolbarItem(placement: .principal){
-                        Text("My Profile")
-                            .bold()
-                    }
-                    ToolbarItem(placement: .topBarTrailing){
-                        NavigationLink{
-                            SettingView()
-                        } label: {
-                            Image(systemName: "gearshape")
-                                .foregroundStyle(Color(.black))
-                        }
+            ScrollView{
+                VStack(alignment: .leading ,spacing: 16){
+                    CircleImageGradience()
+                    LoginForm()
+                    LoginThirdParty()
+                }
+            }
+            .padding(.horizontal, 16)
+            .toolbar{
+                ToolbarItem(placement: .principal){
+                    Text("My Profile")
+                        .font(.title2)
+                        .bold()
+                }
+                ToolbarItem(placement: .topBarTrailing){
+                    NavigationLink{
+                        SettingView(isLogout: $isLogout)
+                    } label: {
+                        Image(systemName: "gearshape")
+                            .foregroundStyle(Color(.black))
                     }
                 }
+            }
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
 
 #Preview {
-    Profile()
+    ContentView()
 }
 
 
-struct ProfileContentView: View{
+
+
+struct CircleImageGradience: View {
+    var body: some View {
+        // Image circle
+        VStack(alignment: .center){
+            bedge(iconName: "bagboy1")
+                .clipShape(.circle)
+                .frame(minWidth: 32, maxWidth: 96)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.top, 32)
+    }
+}
+
+
+
+
+
+struct LoginThirdParty: View {
+    var body: some View {
+        // Login with google and password
+        Section(header: headerText(text: "Account Linked With")){
+            VStack(alignment: .center, spacing: 14){
+                primaryButtonIcon(text: "Sign Up With Facebook", iconName: "facebook", action: {
+                    print("Hello")
+                })
+                primaryButtonIcon(text: "Sign Up with Goggle", iconName: "google", action: {
+                    print("Hello")
+                })
+            }
+        }
+        // End Login with google and password
+    }
+}
+
+
+struct LoginForm: View{
     @State var username: String = ""
     @State var email: String = ""
     var body: some View{
-        VStack{
-            Form{
-                HStack(alignment: .center){
-                    bedge(iconName: "bagboy1")
-                        .clipShape(.circle)
-                        .frame(minWidth: 32, maxWidth: 96)
-                }
-                .frame(maxWidth: .infinity)
-                VStack(alignment: .leading, spacing: 26){
-                    Group{
-                        Group{
-                            Section(header: headerText(text: "Username")){
-                                formTextField(iconName: "person", title: "Nhanh Kimson", text: $username)
-                            }
-                            Section(header: headerText(text: "Email or Phone Number")){
-                                formTextField(iconName: "envelope", title: "nhanhkimson.biu@gmail.com", text: $username)
-                            }
-                        }
-                        .disabled(true)
-                        Section(header: headerText(text: "Account Linked With")){
-                            VStack(alignment: .center, spacing: 14){
-                                primaryButton(text: "Create Account", false, action: {
-                                    
-                                })
-                                Text("Or using other method")
-                                    .foregroundStyle(.gray)
-                                primaryButtonIcon(text: "Sign Up With Facebook", iconName: "facebook", action: {
-                                    print("Hello")
-                                })
-                                primaryButtonIcon(text: "Sign Up with Goggle", iconName: "google", action: {
-                                    print("Hello")
-                                })
-                            }
-                        }
+        // Login Form username | Email
+        Form{
+            VStack(alignment: .leading, spacing: 16){
+                Group{
+                    Section(header: headerText(text: "Username")){
+                        formTextField(iconName: "person", title: "Nhanh Kimson", text: $username)
                     }
-                    .listRowInsets(EdgeInsets())
+                    Section(header: headerText(text: "Email or Phone Number")){
+                        formTextField(iconName: "envelope", title: "nhanhkimson.biu@gmail.com", text: $username)
+                    }
+                    .disabled(true)
                 }
-                .listRowSeparator(.hidden)
             }
-            .scrollContentBackground(.hidden)
+            .listRowInsets(EdgeInsets())
+            .listRowSeparator(.hidden)
         }
+        .formStyle(.columns)
+        .scrollContentBackground(.hidden)
     }
 }
