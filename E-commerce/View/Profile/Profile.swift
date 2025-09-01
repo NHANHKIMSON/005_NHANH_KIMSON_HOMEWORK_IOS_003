@@ -18,7 +18,7 @@ struct Profile: View {
             .toolbar{
                 ToolbarItem(placement: .principal){
                     Text("My Profile")
-                        .font(.title2)
+                        .font(.title3)
                         .bold()
                 }
                 ToolbarItem(placement: .topBarTrailing){

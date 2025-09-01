@@ -18,18 +18,33 @@ func formatCurrency(_ amount: Double, currencyCode: String = "USD") -> String{
 }
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-func primaryButton(text: String, _ isNoneBg: Bool, action: @escaping()-> Void) -> some View{
-    Button(action: action,
-    label: {
-        Text(text)
-            .foregroundStyle(isNoneBg ? .blue : .white)
-            .frame(maxWidth: .infinity)
-            .font(.title3)
-            .padding(.vertical, isNoneBg ? 0 : 14)
-            .background(isNoneBg ? .clear : Color(.blue))
-            .cornerRadius(24)
-    })
+struct PrimaryButton: View {
+    var text: String = ""
+    var buttonType: Int
+    var action: ()-> Void = {}
+    var size: String = "lg"
+    var body: some View {
+        Button(action: action,
+        label: {
+            Text(text)
+                .foregroundStyle(buttonType == 1 ? .blue : buttonType == 3 ? Color.black : .white)
+                .frame(maxWidth: .infinity)
+                .font(.title3)
+                .padding(.vertical, buttonType == 1 ? 0 : size == "sm" ? 9 : 14)
+                .background((buttonType == 1 || buttonType == 3) ? .clear : Color(.blue))
+                .overlay(
+                    RoundedRectangle(cornerRadius: .infinity)
+                        .stroke(Color.blue, lineWidth: buttonType == 3 ? 2 : 0)
+                )
+                .clipShape(RoundedRectangle(cornerRadius: .infinity))
+
+        })
+    }
 }
+
+
+
+
 
 func primaryButtonIcon(text: String, iconName: String, action:@escaping() -> Void) -> some View{
     Button(action: action, label: {
@@ -58,11 +73,8 @@ func bedge(iconName: String) -> some View{
     Image(iconName)
         .resizable()
         .scaledToFit()
-        .frame(maxWidth: .infinity)
+        .frame(width: .infinity)
 }
-
-
-
 #Preview {
     ContentView()
 }

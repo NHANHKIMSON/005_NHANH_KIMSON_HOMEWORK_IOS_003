@@ -95,7 +95,7 @@ struct SettingContentView: View{
             .toolbar{
                 ToolbarItem(placement: .principal){
                     Text("Setting")
-                        .font(.title2)
+                        .font(.title3)
                         .bold()
                 }
             }

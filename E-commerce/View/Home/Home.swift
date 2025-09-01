@@ -7,23 +7,7 @@ struct Home: View {
         NavigationStack{
             UserInfo()
             VStack{
-                HStack{
-                    ForEach(tab.indices, id: \.self){ index in
-                        Button(action: {withAnimation{
-                            selectedTab = index
-                        }}){
-                            VStack{
-                                Text("\(tab[index])")
-                                    .font(.title2)
-                                    .foregroundStyle(.black)
-                                Capsule()
-                                    .fill(selectedTab == index ? Color(.blue) : Color.clear)
-                                    .frame(height: 3)
-                            }
-                        }
-                    }
-                }
-                
+                TopMenu(tab: tab, selectedTab: $selectedTab)
             }
             // display View
             ScrollView{
@@ -42,7 +26,6 @@ struct Home: View {
 #Preview {
     Home()
 }
-
 
 struct UserInfo: View {
     var user: User = User.user

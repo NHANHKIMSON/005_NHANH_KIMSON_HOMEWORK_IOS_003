@@ -20,14 +20,14 @@ struct Landing: View{
                 .tabViewStyle(.page)
                 .indexViewStyle(.page(backgroundDisplayMode: .always))
                 VStack(spacing: 18){
-                    primaryButton(text: "Create an account", false){
+                    PrimaryButton(text: "Create an account", buttonType: 2){
                         isLogin = true
                     }
                     .navigationDestination(isPresented: $isLogin){
                         CreateAccount(isLoged: $isHome)
                             .navigationBarBackButtonHidden(true)
                     }
-                    primaryButton(text: "Already have an account", true){
+                    PrimaryButton(text: "Already have an account", buttonType: 1){
                     }
                 }
                 .padding(.horizontal)

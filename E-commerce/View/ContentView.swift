@@ -9,7 +9,7 @@ struct ContentView: View {
                     .tabItem{
                         Label("Home", systemImage: "house.fill")
                     }
-                Text("Order")
+                Order()
                     .tabItem{
                         Label("Order", systemImage: "box.truck.fill")
                     }

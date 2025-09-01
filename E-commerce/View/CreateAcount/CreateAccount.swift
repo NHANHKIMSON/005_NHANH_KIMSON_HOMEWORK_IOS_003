@@ -34,21 +34,21 @@ struct CreateAccount: View {
                         .formStyle(.columns)
                     }
                 }
-//                .toolbar{
-//                    ToolbarItem(placement: .topBarLeading){
-//                        VStack(alignment: .leading){
-//                            Text("Create Account")
-//                                .font(.title)
-//                                .bold()
-//                            Text("Start learning with create your account")
-//                                .foregroundStyle(Color(.systemGray))
-//                        }
-//                    }
-//                }
+                .toolbar{
+                    ToolbarItem(placement: .topBarLeading){
+                        VStack(alignment: .leading){
+                            Text("Create Account")
+                                .font(.title)
+                                .bold()
+                            Text("Start learning with create your account")
+                                .foregroundStyle(Color(.systemGray))
+                        }
+                    }
+                }
                 // ----------------------
                 
                 VStack(alignment: .center, spacing: 14){
-                    primaryButton(text: "Create Account", false, action: {
+                    PrimaryButton(text: "Create Account", buttonType: 2, action: {
                         isLoged.toggle()
                     })
                     Text("Or using other method")
@@ -66,7 +66,9 @@ struct CreateAccount: View {
     }
 }
 
-
+#Preview{
+    ContentView()
+}
 
 // Text header for section
 func headerText(text: String) -> some View{

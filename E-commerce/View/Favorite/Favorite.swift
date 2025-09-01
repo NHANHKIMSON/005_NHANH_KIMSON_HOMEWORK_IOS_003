@@ -9,7 +9,7 @@ struct Favorite: View {
             .toolbar{
                 ToolbarItem(placement: .principal){
                     Text("My Favorite")
-                        .font(.title2)
+                        .font(.title3)
                         .bold()
                 }
             }
