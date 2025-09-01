@@ -15,7 +15,7 @@ struct OrderCard: View {
     var staticColor: String = "white"
     var body: some View {
         HStack{
-            VStack{
+            VStack(spacing: 16){
                 HStack{
                     HStack{
                         bedge(iconName: image)
@@ -49,4 +49,8 @@ struct OrderCard: View {
         }
         .padding()
     }
+}
+
+#Preview{
+    Order()
 }

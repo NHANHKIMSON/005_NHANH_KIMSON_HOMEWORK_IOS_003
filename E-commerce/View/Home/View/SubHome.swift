@@ -1,10 +1,3 @@
-//
-//  SubHome.swift
-//  Psakhmer
-//
-//  Created by Apple on 8/30/25.
-//
-
 import SwiftUI
 
 struct SubHome: View {

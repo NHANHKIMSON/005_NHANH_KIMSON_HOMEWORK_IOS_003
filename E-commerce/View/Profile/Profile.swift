@@ -38,13 +38,6 @@ struct Profile: View {
 
 
 
-
-
-
-
-
-
-
 struct LoginThirdParty: View {
     var body: some View {
         // Login with google and password

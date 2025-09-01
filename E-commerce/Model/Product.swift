@@ -78,6 +78,8 @@ class Product: Identifiable{
     // ----------------------------------------------------------
     static var myOrder: [Product] = [
         Product(title: "Boys' Backpack", subTitle: "School Essentials", image: "bagboy1", isFovorite: false, price: 89, qauntity: 50, status: "Trending"),
+        Product(title: "Tissot Watch", subTitle: "Luxury Swiss", image: "watchTissot", isFovorite: true, price: 499, qauntity: 10, status: "Luxury"),
+        Product(title: "Women’s Watch", subTitle: "Elegant Style", image: "watchWoman", isFovorite: false, price: 299, qauntity: 15, status: "Trending"),
         Product(title: "Classic Watch", subTitle: "Timeless", image: "watch", isFovorite: true, price: 199, qauntity: 25, status: "Best Seller"),
         Product(title: "Tissot Watch", subTitle: "Luxury Swiss", image: "watchTissot", isFovorite: true, price: 499, qauntity: 10, status: "Luxury"),
         Product(title: "Women’s Watch", subTitle: "Elegant Style", image: "watchWoman", isFovorite: false, price: 299, qauntity: 15, status: "Trending"),
