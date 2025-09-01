@@ -47,7 +47,6 @@ struct OrderCard: View {
             RoundedRectangle(cornerRadius: 12)
                 .stroke(Color.gray.opacity(0.12), lineWidth: 2)
         }
-        .padding()
     }
 }
 

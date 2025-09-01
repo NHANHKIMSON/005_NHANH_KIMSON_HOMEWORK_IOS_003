@@ -12,6 +12,7 @@ struct MyOrder: View {
                     OrderCard(image: product[index].image, qauntity: product[index].qauntity, color: color, price: product[index].price)
                 }
             }
+            .padding(.horizontal, 16)
         }
     }
 }
