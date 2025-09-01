@@ -8,7 +8,7 @@
 import SwiftUI
 struct MyOrder: View {
     let columns = [GridItem(.flexible())]
-    var product = Product.product
+    var product = Product.myOrder
     let color: Color = .yellow
     var body: some View {
         LazyVGrid(columns: columns){

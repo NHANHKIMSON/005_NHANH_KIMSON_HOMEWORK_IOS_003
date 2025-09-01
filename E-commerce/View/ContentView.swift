@@ -1,5 +1,4 @@
 import SwiftUI
-
 struct ContentView: View {
     @State var isLogin: Bool = false
     var body: some View {

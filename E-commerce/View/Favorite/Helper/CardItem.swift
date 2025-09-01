@@ -9,8 +9,12 @@ struct CartItem: View{
     var body: some View{
         ZStack{
             VStack{
-                bedge(iconName: icon)
-                    .cornerRadius(24)
+                Image(icon)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(maxWidth: 150, maxHeight: 145)
+                    .clipShape(RoundedRectangle(cornerRadius: 24))
+                
                 VStack(spacing: 12){
                     Text(title)
                         .bold()
@@ -38,5 +42,5 @@ struct CartItem: View{
     }
 }
 #Preview{
-    CardGridView()
+    SubHome()
 }

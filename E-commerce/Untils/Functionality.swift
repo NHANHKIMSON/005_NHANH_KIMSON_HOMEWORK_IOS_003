@@ -73,7 +73,6 @@ func bedge(iconName: String) -> some View{
     Image(iconName)
         .resizable()
         .scaledToFit()
-        .frame(width: .infinity)
 }
 #Preview {
     ContentView()

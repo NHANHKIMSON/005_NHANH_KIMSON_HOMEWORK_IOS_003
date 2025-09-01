@@ -2,7 +2,7 @@ import SwiftUI
 struct Carousel: View {
     @State private var currentIndex: Int = 0
     let timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
-    var product = Product.product
+    var product = Product.promotion
     var body: some View {
         TabView(selection: $currentIndex){
             ForEach(product.indices, id: \.self){ index in

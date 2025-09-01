@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Category: View {
-    var product = Product.product
+    var product = Product.category
     var body: some View {
         LazyVGrid(columns: [GridItem(.flexible(minimum: 50, maximum: .infinity))]){
             ForEach(product.indices, id: \.self){ index in

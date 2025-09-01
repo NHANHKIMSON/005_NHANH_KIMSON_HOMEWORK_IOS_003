@@ -1,15 +1,12 @@
-
-
 import SwiftUI
 import Foundation
-
 struct Profile: View {
     @Binding var isLogout: Bool
     var body: some View {
         NavigationStack{
             ScrollView{
                 VStack(alignment: .leading ,spacing: 16){
-                    CircleImageGradience()
+                    CircleImageGradient()
                     LoginForm()
                     LoginThirdParty()
                 }
@@ -42,18 +39,7 @@ struct Profile: View {
 
 
 
-struct CircleImageGradience: View {
-    var body: some View {
-        // Image circle
-        VStack(alignment: .center){
-            bedge(iconName: "bagboy1")
-                .clipShape(.circle)
-                .frame(minWidth: 32, maxWidth: 96)
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.top, 32)
-    }
-}
+
 
 
 
@@ -95,9 +81,8 @@ struct LoginForm: View{
                 }
             }
             .listRowInsets(EdgeInsets())
-            .listRowSeparator(.hidden)
+            .listRowSeparator(.hidden)  // hide row seperate
         }
-        .formStyle(.columns)
-        .scrollContentBackground(.hidden)
+        .formStyle(.columns)  // form style to columns
     }
 }

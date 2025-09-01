@@ -7,6 +7,7 @@
 import SwiftUI
 
 struct OrderCard: View {
+    var text: String = "OnProcess"
     var image: String = ""
     var qauntity: Int = 20
     var color: Color = .clear
@@ -32,11 +33,11 @@ struct OrderCard: View {
                         }
                     }
                     VStack{
-                        MiniButton(text: "OnProcess", varain: color)
+                        MiniButton(text: text, varain: color)
                     }
                 }
                 HStack{
-                    PrimaryButton(text: "Tracking", buttonType: 3, action: {}, size: "sm")
+                    PrimaryButton(text: "Detail", buttonType: 3, action: {}, size: "sm")
                     PrimaryButton(text: "Tracking", buttonType: 2, action: {}, size: "sm")
                 }
             }

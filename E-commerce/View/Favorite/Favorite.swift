@@ -5,6 +5,7 @@ struct Favorite: View {
             MenuScrollBar()
             ScrollView{
                 CardGridView()
+                    .padding(.top)
             }
             .toolbar{
                 ToolbarItem(placement: .principal){
